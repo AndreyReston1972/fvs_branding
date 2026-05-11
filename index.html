@@ -565,6 +565,153 @@
     .ident-grid { grid-template-columns: 1fr; }
   }
 
+
+  /* REVISÃO FINAL PREMIUM — CONTRASTE, EDITORIAL E RESPONSIVIDADE */
+  body {
+    background-attachment: fixed;
+  }
+
+  .secao, .secao-verde, .secao-branco, .frase-mae-bloco {
+    scroll-margin-top: 24px;
+  }
+
+  .secao-titulo, .secao-titulo-claro, .sumario-titulo, .banda-frase, .frase-mae-texto {
+    text-wrap: balance;
+  }
+
+  .corpo, .corpo-claro, .card-body, .card-body-claro, .card-body-escuro, .card-body-verde,
+  .lista li, .lista-claro li, .lista-numerada li, .regra-txt, .diag-txt, .check-txt {
+    text-wrap: pretty;
+  }
+
+  .card-verde, .card-pedra, .card-branco, .card-off, .bloco-evitar, .bloco-priorizar, .regra-item {
+    transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+  }
+
+  .card-verde, .card-pedra, .card-branco, .card-off {
+    box-shadow: 0 18px 48px rgba(26,26,24,.045);
+  }
+
+  .secao-verde .card-verde,
+  .secao-verde .bloco-evitar,
+  .secao-verde .bloco-priorizar {
+    box-shadow: 0 18px 58px rgba(0,0,0,.12);
+  }
+
+  .secao-verde .bloco-priorizar {
+    background: rgba(255,255,255,.035);
+    border: 1px solid rgba(194,174,143,.16);
+  }
+
+  .secao-verde .bloco-priorizar .label-priorizar {
+    color: var(--pedra);
+  }
+
+  .secao-verde .bloco-priorizar .lista-claro li {
+    color: rgba(244,240,232,.88);
+    border-bottom-color: rgba(194,174,143,.18);
+  }
+
+  .secao-verde .bloco-priorizar .lista-claro li::before {
+    background: var(--pedra);
+  }
+
+  .secao-tom-voz .bloco-priorizar {
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(194,174,143,.14);
+    border-radius: 24px;
+    padding: clamp(24px, 3vw, 34px);
+  }
+
+  .secao-tom-voz .bloco-priorizar .bloco-label,
+  .secao-tom-voz .bloco-priorizar .label-priorizar {
+    color: var(--pedra);
+    opacity: 1;
+  }
+
+  .secao-tom-voz .grid-2 {
+    align-items: stretch;
+  }
+
+  .secao-tom-voz .grid-2 > * {
+    height: 100%;
+  }
+
+  .secao-numero, .secao-numero-claro, .sub-numero, .card-label, .bloco-label, .frase-mae-label, .alerta-titulo {
+    line-height: 1.45;
+  }
+
+  .ident-grid .card-branco,
+  .ident-grid .card-verde,
+  .ident-grid .card-pedra {
+    min-height: 178px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .ident-grid .card-label {
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+
+  .tabela th, .tabela td {
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  @media (min-width: 981px) {
+    .secao-tom-voz .grid-2 {
+      grid-template-columns: minmax(0, 1.06fr) minmax(0, .94fr);
+      gap: 34px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    body { background-attachment: scroll; }
+
+    .secao, .secao-verde, .secao-branco, .frase-mae-bloco {
+      padding-block: 58px;
+    }
+
+    .secao-titulo, .secao-titulo-claro {
+      margin-bottom: 24px;
+    }
+
+    .secao-tom-voz .bloco-priorizar {
+      padding: 24px 20px;
+      border-radius: 20px;
+    }
+
+    .ident-grid .card-branco,
+    .ident-grid .card-verde,
+    .ident-grid .card-pedra {
+      min-height: unset;
+    }
+
+    .grid-2, .grid-3, .regras-grid {
+      margin-block: 22px;
+    }
+  }
+
+  @media (max-width: 430px) {
+    .secao, .secao-verde, .secao-branco, .frase-mae-bloco {
+      padding-block: 54px;
+    }
+
+    .card-label, .bloco-label, .secao-numero, .secao-numero-claro, .sub-numero {
+      letter-spacing: .18em;
+    }
+
+    .secao-tom-voz .bloco-priorizar {
+      padding: 22px 18px;
+    }
+
+    .lista li, .lista-claro li, .lista-numerada li {
+      padding-left: 26px;
+    }
+  }
+
   @media print {
     body { background: white; }
     .capa { min-height: auto; page-break-after: always; }
@@ -572,6 +719,7 @@
   }
 
 </style>
+<!-- Versão final premium: contraste e responsividade revisados -->
 </head>
 <body>
 
